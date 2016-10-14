@@ -79,7 +79,7 @@ resource "aws_security_group" "web_server_sg" {
 
 resource "aws_security_group" "db_server_sg" {
   name        = "db_server_sg"
-  description = "Allows hhtp, https and ssh traffic"
+  description = "Allows MySQL DB access through web_server_sg"
   vpc_id = "${var.vpc_id}" 
   
   ingress {
